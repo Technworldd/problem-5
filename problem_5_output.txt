@@ -1,0 +1,3 @@
+Total scores:
+Student ID 1: 40
+Student ID 2: 41

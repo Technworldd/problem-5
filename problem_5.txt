@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Map<Integer, List<Integer>> scores = new HashMap<>();
+        scores.put(1, Arrays.asList(10, 20, 10));
+        scores.put(2, Arrays.asList(10, 20, 11));
+        
+        Map<Integer, Integer> totalScores = new HashMap<>();
+        for (int id : scores.keySet()) {
+            int totalScore = 0;
+            for (int score : scores.get(id)) {
+                totalScore += score;
+            }
+            totalScores.put(id, totalScore);
+        }
+        
+        System.out.println("Total scores:");
+        for (int id : totalScores.keySet()) {
+            System.out.println("Student ID " + id + ": " + totalScores.get(id));
+        }
+    }
+}
